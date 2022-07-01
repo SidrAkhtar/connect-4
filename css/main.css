@@ -1,0 +1,53 @@
+body {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   font-family: 'Stick No Bills', sans-serif;
+}
+
+#board {
+   display: grid;
+   grid-template-columns: repeat(7, 6vmin);
+   grid-template-rows: repeat(6, 6vmin);
+   gap: 0px;
+   background-color: lightgray;
+   height: 150px;
+   padding: 150px;
+   margin: 50px;
+}
+
+#board > div {
+   border: solid maroon;
+   border-radius: 50%;
+   align-items: center;
+   padding: 0px;
+   /* margin: 5px; */
+   height: 50px;
+   justify-content: center;
+}
+
+h1 {
+font-size: 100px;
+font-stretch: extra-expanded;
+color: maroon;
+}
+
+h1 {
+   font-size: 100px;
+   font-stretch: extra-expanded;
+   color: maroon;
+   }
+
+p {
+   
+}
+
+button {
+   display: grid;
+   /* grid-template-columns:
+   grid-template-rows:  */
+   font-size: 50px;
+   font-stretch: extra-expanded;
+   color: maroon;
+}
