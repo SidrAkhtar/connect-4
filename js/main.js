@@ -10,7 +10,7 @@ const COLOR_LOOKUP = {
 let board; 
 let turn; // 1 or -1
 let gameStatus; // null -> game in play; 1/-1 player win; 'T' -> tie
-// lookup how to keep track of scores. watch RPS lecture!!!
+// lookup how to keep track of scores. watch RPS  lecture!!!
 
 
 /*----- cached element references -----*/
@@ -47,5 +47,11 @@ function render() {
 }
 
 function renderMessage() {
-   
+   if (gameStatus === null) {
+      msgEl.innerHTML = `Player <span style="color: ${COLOR_LOOKUP[turn]}">${COLOR_LOOKUP[turn].toUpperCase()}</span>'s Turn`;
+   } else if (gameStatus === 'T') {
+
+   } else {
+
+   }
 }
