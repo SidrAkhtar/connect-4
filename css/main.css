@@ -1,30 +1,44 @@
+* {
+   box-sizing: border-box;
+}
+
 body {
    display: flex;
    flex-direction: column;
    justify-content: center;
    align-items: center;
    font-family: 'Stick No Bills', sans-serif;
+   background-color: #c0c0c0;
 }
 
-#board {
+main {
+
+}
+
+.board {
    display: grid;
-   grid-template-columns: repeat(7, 6vmin);
-   grid-template-rows: repeat(6, 6vmin);
-   gap: 0px;
+   grid-template-columns: repeat(7, 8vmin);
+   grid-template-rows: repeat(6, 8vmin);
+   /* gap: 10px; */
    background-color: lightgray;
-   height: 150px;
-   padding: 150px;
-   margin: 50px;
+   border: solid gray;
+   align-content: center;
+   margin: 50x;
+   gap: 2vmin;
+   /* cursor: default; */
 }
 
-#board > div {
-   border: solid maroon;
+.board > div {
+   /* border: solid maroon; */
    border-radius: 50%;
-   align-items: center;
-   padding: 0px;
-   /* margin: 5px; */
-   height: 50px;
-   justify-content: center;
+   border: 0.5vmin solid maroon;
+
+
+/* align-content: start; */
+/* gap: 0px; */
+   /* margin: 100px; */
+   /* padding: -5px; */
+
 }
 
 h1 {
@@ -39,15 +53,24 @@ h1 {
    color: maroon;
    }
 
-p {
-   
+div > Leftside {
+   float: left;
+}
+
+.Rightside {
+   justify-content: right;
+}
+
+footer {
+   display: flex;
+   justify-content: center;
+   align-items: center;
 }
 
 button {
    display: grid;
-   /* grid-template-columns:
-   grid-template-rows:  */
-   font-size: 50px;
+   font-size: 5vmin;
    font-stretch: extra-expanded;
    color: maroon;
+   margin-top: 5vmin;
 }
