@@ -5,6 +5,16 @@ const COLOR_LOOKUP = {
    null: 'white',
 };
 
+const WINNING_COMBOS = [
+   [0, 0, 0, 0]
+   [1, 1, 1, 1, 1, 1]
+   [2, 2, 2, 2, 2, 2]
+   [3, 3, 3, 3, 3, 3]
+   [4, 4, 4, 4, 4, 4]
+   [5, 5, 5, 5, 5, 5]
+   [6, 6, 6, 6, 6, 6]
+];
+
 /*----- app's state (variables) -----*/
 // Array of  42 elements... null -> circles available; 1 or -1  for players
 let board; 
@@ -54,9 +64,14 @@ function handleMove(evt) {
    // TODO: need to update gameStatus!!!
    // NEED TO FIND OUT HOW TO MOVE THE CIRCLE/PLAYER'S TURN 
    // TO LAST ITEM IN THE COLUMN!!! MAYBE CHANGE INDEX???
-   // gameStatus = getGameStatus();
+   gameStatus = getGameStatus();
    render();
 }
+
+// function getGameStatus()  {
+
+// }
+
 
 // Render’s job is to transfer/visualize all state to the DOM
 function render() {
