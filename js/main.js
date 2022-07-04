@@ -14,14 +14,14 @@ let gameStatus; // null -> game in play; 1/-1 player win; 'T' -> tie
 
 
 /*----- cached element references -----*/
-const circleEls = document.querySelectorAll('.board > div');
+const circleEls = [...document.querySelectorAll('#board > div')];
 const msgEl = document.querySelector('h3');
 
 /*----- event listeners -----*/
-
+document.getElementById('board').addEventListener('click', handleMove);
 
 /*----- functions -----*/
-init()
+init();
 
 function init() {
    // board = new Array(42).fill(null);  professor did it for ttt.. instead he used board array
@@ -39,6 +39,26 @@ function init() {
    render();
 }
 
+// In responce to user interaction (e.g., click)
+// We update  ALL impacted state,
+// then lastly, call render
+function handleMove(evt) {
+   // Guards
+   if (
+      gameStatus ||
+      !circleEls.includes(evt.target)
+   ) return;
+   const idx = circleEls.indexOf(evt.target);
+   board[idx] = turn;
+   turn *= -1;
+   // TODO: need to update gameStatus!!!
+   // NEED TO FIND OUT HOW TO MOVE THE CIRCLE/PLAYER'S TURN 
+   // TO LAST ITEM IN THE COLUMN!!! MAYBE CHANGE INDEX???
+   // gameStatus = getGameStatus();
+   render();
+}
+
+// Render’s job is to transfer/visualize all state to the DOM
 function render() {
    circleEls.forEach(function(circleEl, idx) {
       circleEl.style.backgroundColor = COLOR_LOOKUP[board[idx]];
@@ -50,8 +70,8 @@ function renderMessage() {
    if (gameStatus === null) {
       msgEl.innerHTML = `Player <span style="color: ${COLOR_LOOKUP[turn]}">${COLOR_LOOKUP[turn].toUpperCase()}</span>'s Turn`;
    } else if (gameStatus === 'T') {
-
+      // Tie game
    } else {
-
+      // Player has won!
    }
 }

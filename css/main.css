@@ -15,7 +15,7 @@ main {
 
 }
 
-.board {
+#board {
    display: grid;
    grid-template-columns: repeat(7, 8vmin);
    grid-template-rows: repeat(6, 8vmin);
@@ -28,7 +28,7 @@ main {
    /* cursor: default; */
 }
 
-.board > div {
+#board > div {
    /* border: solid maroon; */
    border-radius: 50%;
    border: 0.5vmin solid maroon;
