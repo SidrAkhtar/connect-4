@@ -7,14 +7,15 @@
    }
 
 // const WINNING_COMBOS = [
-//    [0, 0, 0, 0]
-//    [1, 1, 1, 1, 1, 1]
-//    [2, 2, 2, 2, 2, 2]
-//    [3, 3, 3, 3, 3, 3]
-//    [4, 4, 4, 4, 4, 4]
-//    [5, 5, 5, 5, 5, 5]
-//    [6, 6, 6, 6, 6, 6]
+//    [0, 1, 2, 3]
+//    [0, 1, 2, 3, 4, 5]
+//    [0, 1, 2, 3, 4, 5]
+//    [0, 1, 2, 3, 4, 5]
+//    [0, 1, 2, 3, 4, 5]
+//    [0, 1, 2, 3, 4, 5]
+//    [0, 1, 2, 3, 4, 5]
 // ];
+
 
 
 /*----- app's state (variables) -----*/
@@ -23,11 +24,13 @@ let board; // 2D Array wherre the nested arrays represent the columns
 let turn; // 1 or -1; 0 for empty cell
 let gameStatus; // null -> game in play; 1/-1 player win; 'T' -> tie
 
+
 // lookup how to keep track of scores. watch RPS  lecture!!!
 
 
 /*----- cached element references -----*/
 const pointerEls = [...document.querySelectorAll('#pointers > div')];
+// const boardRows = [document.getElementById('#board > div')]
 // const msgEl = document.querySelector('h3');
 
 
@@ -50,12 +53,12 @@ function init() {
       [0, 0, 0, 0, 0, 0], // column 6
    ];
    turn = 1;
-   // gameStatus = null;
+   gameStatus = null;
    render();
 }
 
 // In responce to user interaction (e.g., click)
-// We update  ALL impacted state,
+// We update ALL impacted state,
 // then lastly, call render
 function handleDrop(evt) {
    const columnIdx = pointerEls.indexOf(evt.target);
@@ -71,7 +74,23 @@ function handleDrop(evt) {
    // NEED TO FIND OUT HOW TO MOVE THE CIRCLE/PLAYER'S TURN 
    // TO LAST ITEM IN THE COLUMN!!! MAYBE CHANGE INDEX???
    // gameStatus = getGameStatus();
+   winner = checkWin(columnIdx, rowIdx);
    render();
+}
+
+function checkWin(columnIdx, rowIdx) {
+   const player = board[columnIdx][rowIdx];
+      return checkVertWin(columnIdx, player) || checkHorzWin(columnIdx, rowIdx, player)
+    }
+
+function checkVertWin() {
+   let i = 0;
+   while(i < board.length) {
+   i++;
+    if ((Math.abs([i]+[i-1]+[i-2]+[i-3])) >= 4) {
+       return true;
+   }
+}
 }
 
 // function getGameStatus()  {
@@ -99,6 +118,8 @@ function renderPointers() {
    });
    // renderMessage();
 }
+
+
 
 // function renderMessage() {
 //    if (gameStatus === null) {
