@@ -11,20 +11,36 @@ body {
    background-color: #c0c0c0;
 }
 
-section {
-   
+#pointers {
+   display: grid;
+   grid-template-columns: repeat(7, 8vmin);
+   gap: 0.5vmin;
+   margin-top: 2vmin;
+}
+
+#pointers > div {
+   height: 5vmin;
+   border-width: 5vmin;
+   border-style: solid;
+   border-color: #BC8F8F transparent transparent;
+   transform: scale(0.7);
+}
+
+#pointers > div:hover {
+   transform: scale(0.9);
+   transition: transform 150ms ease-in;
+   border-top-color: maroon;
 }
 
 #board {
    display: grid;
    grid-template-columns: repeat(7, 8vmin);
    grid-template-rows: repeat(6, 8vmin);
-   /* gap: 10px; */
-   background-color: lightgray;
-   border: solid gray;
+   background-color: #BC8F8F;
+   border: 4mm ridge maroon;
    align-content: center;
    margin: 50x;
-   gap: 2vmin;
+   gap: 0.5vmin;
    /* cursor: default; */
 }
 
@@ -47,11 +63,11 @@ font-stretch: extra-expanded;
 color: maroon;
 }
 
-h1 {
-   font-size: 100px;
+h3 {
+   font-size: 30px;
    font-stretch: extra-expanded;
-   color: maroon;
-   }
+   color: indianred;
+}
 
 div > Leftside {
    float: left;
