@@ -14,7 +14,7 @@ body {
 #pointers {
    display: grid;
    grid-template-columns: repeat(7, 8vmin);
-   gap: 0.5vmin;
+   gap: 0.7vmin;
    margin-top: 2vmin;
 }
 
@@ -45,7 +45,7 @@ body {
 }
 
 #board > div {
-   /* border: solid maroon; */
+
    border-radius: 50%;
    border: 0.5vmin solid maroon;
 
@@ -61,21 +61,24 @@ h1 {
 font-size: 100px;
 font-stretch: extra-expanded;
 color: maroon;
+margin: 1vmin;
+padding: 0vmin;
 }
 
 h3 {
    font-size: 30px;
    font-stretch: extra-expanded;
    color: indianred;
+   margin: 0vmin;
 }
 
-div > Leftside {
-   float: left;
+.Leftside {
+   text-align: left;
 }
 
-.Rightside {
+/* .Rightside {
    justify-content: right;
-}
+} */
 
 footer {
    display: flex;
@@ -84,9 +87,11 @@ footer {
 }
 
 button {
-   display: grid;
    font-size: 5vmin;
    font-stretch: extra-expanded;
    color: maroon;
-   margin-top: 5vmin;
+   /* margin-top: 5vmin; */
+   border: 2px solid;
+   border-radius: 4px;
+   background-color: #BC8F8F;
 }
