@@ -162,7 +162,7 @@ function renderPointers() {
 
 function renderMessage() {
    if (gameStatus === null) {
-      msgEl.innerHTML = "Next player's turn"
+      msgEl.innerHTML = "Next Player's turn"
    } else if (gameStatus === 'T') {
       // Tie game
       msgEl.textContent = 'Tie Game! Try Again!';
