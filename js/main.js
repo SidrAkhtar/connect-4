@@ -6,17 +6,6 @@
    '-1': 'palevioletred', //hotpink
    }
 
-// const WINNING_COMBOS = [
-//    [0, 1, 2, 3]
-//    [0, 1, 2, 3, 4, 5]
-//    [0, 1, 2, 3, 4, 5]
-//    [0, 1, 2, 3, 4, 5]
-//    [0, 1, 2, 3, 4, 5]
-//    [0, 1, 2, 3, 4, 5]
-//    [0, 1, 2, 3, 4, 5]
-// ];
-
-
 
 /*----- app's state (variables) -----*/
 // Array of  42 elements... null -> circles available; 1 or -1  for players
@@ -24,14 +13,12 @@ let board; // 2D Array wherre the nested arrays represent the columns
 let turn; // 1 or -1; 0 for empty cell
 let gameStatus; // null -> game in play; 1/-1 player win; 'T' -> tie
 
-
 // lookup how to keep track of scores. watch RPS  lecture!!!
 
 
 /*----- cached element references -----*/
 const pointerEls = [...document.querySelectorAll('#pointers > div')];
-// const boardRows = [document.getElementById('#board > div')]
-// const msgEl = document.querySelector('h3');
+const msgEl = document.querySelector('h3');
 
 
 /*----- event listeners -----*/
@@ -80,23 +67,36 @@ function handleDrop(evt) {
 
 function checkWin(columnIdx, rowIdx) {
    const player = board[columnIdx][rowIdx];
-      return checkVertWin(columnIdx, player) || checkHorzWin(columnIdx, rowIdx, player)
+      return checkVertWin(columnIdx, player) || checkHorzWin(columnIdx, rowIdx, player) || checkDiagWin(columnIdx, rowIdx, player);
     }
 
-function checkVertWin() {
-   let i = 0;
-   while(i < board.length) {
-   i++;
-    if ((Math.abs([i]+[i-1]+[i-2]+[i-3])) >= 4) {
-       return true;
-   }
+function checkVertWin(columnIdx, rowIdx, player) {
+   const colArr = board[columnIdx];
+      let count = 1;
+      // We can use/modify rowIdx because we won't need
+      // to access it's original value anymore
+      rowIdx--;
+      // Count until no longer the same 'player'
+      while(colArr[rowIdx] === player && rowIdx >= 0) {
+          count++;
+          rowIdx--;
+      }
+      return count === 4 ? player : null;
+  }
+
+
+
+function checkHorzWin(columnIdx, rowIdx, player) {
+  
 }
+
+function checkDiagWin(columnIdx, rowIdx, player) {
+   
 }
 
 // function getGameStatus()  {
 
 // }
-
 
 // Render’s job is to transfer/visualize all state to the DOM
 function render() {
@@ -116,17 +116,17 @@ function renderPointers() {
    pointerEls.forEach(function(pointerEl, columnIdx) {
       pointerEl.style.visibility = board[columnIdx].includes(0) ? 'visible' : 'hidden';
    });
-   // renderMessage();
+   renderMessage();
 }
 
-
-
-// function renderMessage() {
-//    if (gameStatus === null) {
-//       msgEl.innerHTML = `Player <span style="color: ${COLOR_LOOKUP[turn]}">${COLOR_LOOKUP[turn].toUpperCase()}</span>'s Turn`;
-//    } else if (gameStatus === 'T') {
-//       // Tie game
-//    } else {
-//       // Player has won!
-//    }
-// }
+function renderMessage() {
+   if (gameStatus === null) {
+      msgEl.innerHTML = `Player <span style="color: ${COLOR_LOOKUP[turn]}">${COLOR_LOOKUP[turn].toUpperCase()}</span>'s Turn`;
+   } else if (gameStatus === 'T') {
+      // Tie game
+      msgEl.textContent = 'Tie Game! Try Again!';
+  } else {
+    // Player has won!
+    msgEl.innerHTML = `Player <span style="color: ${COLOR_LOOKUP[gameStatus]}">${COLOR_LOOKUP[gameStatus].toUpperCase()}</span>'s Wins!`;
+  }
+}
