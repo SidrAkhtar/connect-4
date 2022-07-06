@@ -20,7 +20,7 @@ let gameStatus; // null -> game in play; 1/-1 player win; 'T' -> tie
 /*----- cached element references -----*/
 const pointerEls = [...document.querySelectorAll('#pointers > div')];
 const msgEl = document.querySelector('h3');
-// const msgEls = document.querySelector('h4');
+const msgEls = document.querySelector('h4');
 
 
 /*----- event listeners -----*/
@@ -58,18 +58,17 @@ function handleDrop(evt) {
    turn *= -1;
    winner = checkWin(columnIdx, rowIdx);
    console.log(winner)
-   // gameStatus = getGameStatus();
+   gameStatus = getGameStatus();
    render();
 }
 
 
 function checkWin(columnIdx, rowIdx) {
-   const player = board[columnIdx][rowIdx];
-   if (checkVertWin(columnIdx, rowIdx, player))
-   // if (checkHorzWin(columnIdx, rowIdx, player))
+   const player = board[columnIdx][rowIdx]
+   return checkVertWin(columnIdx, rowIdx, player) ||
+    checkHorzWin(columnIdx, rowIdx, player)
    // || 
    // checkDiagWin(columnIdx, rowIdx, player);
-   return turn;
     }
 
 function checkVertWin(columnIdx, rowIdx, player) {
@@ -90,7 +89,7 @@ function checkVertWin(columnIdx, rowIdx, player) {
 
 function checkHorzWin(columnIdx, rowIdx, player) {
    console.log('columnIdx', columnIdx);
-   console.log('rowOdx', columnIdx);
+   console.log('rowIdx', columnIdx);
    let count = 1
    let idx = columnIdx + 1;
    while((idx < board.length) && board[idx][rowIdx] === player) {
@@ -115,14 +114,15 @@ function checkHorzWin(columnIdx, rowIdx, player) {
 function getGameStatus() {
    // Player won!
    if (winner === 1) {
-          MessageEl.innerHTML = 'Purple Wins!';
+          msgEls.innerHTML = 'Purple Wins!';
+          alert('Purple Wins!')
       } else if
    // Player won!
    (winner === -1) {
-      messageEl.innerHTML = 'Pink Wins!';
+      msgEls.innerHTML = 'Pink Wins!';
     } else (winner === 'null' & !board.includes(null))
       //Tie
-      message.El.innerHTML = 'Tie game! Try again!'
+      msgEls.innerHTML = '?Tie game! Try again!'
    }
 
 
@@ -168,6 +168,6 @@ function renderMessage() {
       msgEl.textContent = 'Tie Game! Try Again!';
   } else {
     // Player has won!
-    msgEl.innerHTML = `Player <span style="color: ${COLOR_LOOKUP[gameStatus]}">${COLOR_LOOKUP[gameStatus].toUpperCase()}</span>'s Wins!`;
+    msgEl.innerHTML = `Player <span style="color: ${COLOR_LOOKUP[gameStatus]}">${COLOR_LOOKUP[gameStatus]}</span>'s Wins!`;
   }
 }
