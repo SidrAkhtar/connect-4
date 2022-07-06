@@ -120,7 +120,7 @@ function getGameStatus() {
    // Player won!
    (winner === -1) {
       messageEl.innerHTML = 'Pink Wins!';
-    } else (winner === null & !board.includes(null))
+    } else (winner === 'null' & !board.includes(null))
       //Tie
       message.El.innerHTML = 'Tie game! Try again!'
    }
@@ -147,9 +147,22 @@ function renderPointers() {
    renderMessage();
 }
 
+// function renderMessage() {
+//    if (gameStatus === null) {
+//       msgEl.innerHTML = `Player <span style="color: ${COLOR_LOOKUP[turn]}">${COLOR_LOOKUP[turn].toUpperCase()}</span>'s Turn`;
+//    } else if (gameStatus === 'T') {
+//       // Tie game
+//       msgEl.textContent = 'Tie Game! Try Again!';
+//   } else {
+//     // Player has won!
+//     msgEl.innerHTML = `Player <span style="color: ${COLOR_LOOKUP[gameStatus]}">${COLOR_LOOKUP[gameStatus].toUpperCase()}</span>'s Wins!`;
+//   }
+// }
+
+
 function renderMessage() {
    if (gameStatus === null) {
-      msgEl.innerHTML = `Player <span style="color: ${COLOR_LOOKUP[turn]}">${COLOR_LOOKUP[turn].toUpperCase()}</span>'s Turn`;
+      msgEl.innerHTML = "Next player's turn"
    } else if (gameStatus === 'T') {
       // Tie game
       msgEl.textContent = 'Tie Game! Try Again!';
