@@ -13,25 +13,11 @@ body {
 
 #player1 > div {
    display: flex;
-   /* flex-direction: row;
-   justify-content: left; */
-   /* justify-content: left;
-   grid-template-columns: 8vmin; */
-   /* grid-template-rows: 10vmin 10vmin 35vmin 15vmin; */
- }
- 
- /* main * {
+}
+
+#scores {
    display: flex;
-   justify-content: left;
-   align-items: left;
- } */
- 
- /* #p-result, #c-result {
-   border: 2vmin solid white;
-   border-radius: 5vmin;
-   width: 100%;
-   padding: 2vmin;
- } */
+}
 
 #pointers {
    display: grid;

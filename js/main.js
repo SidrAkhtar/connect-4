@@ -6,6 +6,8 @@
    '-1': 'palevioletred', //hotpink
    }
 
+// const audio = new Audio('https://assets.mixkit.co/sfx/preview/mixkit-simple-countdown-922.mp3');
+
 
 /*----- app's state (variables) -----*/
 // Array of  42 elements... null -> circles available; 1 or -1  for players
@@ -15,13 +17,11 @@ let winner = null;
 let gameStatus; // null -> game in play; 1/-1 player win; 'T' -> tie
 
 
-
 /*----- cached element references -----*/
 const pointerEls = [...document.querySelectorAll('#pointers > div')];
 const msgEl = document.querySelector('h3');
 const msgEls = document.querySelector('h4');
 const replayButton = document.getElementById('play-again-button');
-
 
 /*----- event listeners -----*/
 document.getElementById('pointers').addEventListener('click', handleDrop);
@@ -77,7 +77,7 @@ function renderPointers() {
 function handleDrop(evt) {
    const columnIdx = pointerEls.indexOf(evt.target);
    // Guards
-   if (columnIdx === -1) return;
+   if (columnIdx === -1 || winner) return;
    const columnArr = board[columnIdx];
    if (!columnArr.includes(0)) return;
    const rowIdx = columnArr.indexOf(0);
