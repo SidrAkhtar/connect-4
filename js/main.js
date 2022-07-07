@@ -15,14 +15,17 @@ let winner = null;
 let gameStatus; // null -> game in play; 1/-1 player win; 'T' -> tie
 
 
+
 /*----- cached element references -----*/
 const pointerEls = [...document.querySelectorAll('#pointers > div')];
 const msgEl = document.querySelector('h3');
 const msgEls = document.querySelector('h4');
+const replayButton = document.getElementById('play-again-button');
 
 
 /*----- event listeners -----*/
 document.getElementById('pointers').addEventListener('click', handleDrop);
+replayButton.addEventListener('click', init);
 
 
 /*----- functions -----*/
@@ -39,6 +42,10 @@ function init() {
       [0, 0, 0, 0, 0, 0], // column 5
       [0, 0, 0, 0, 0, 0], // column 6
    ];
+   // scores = {
+   //    player1: 0,
+   //    player2: 0,
+   // }
    turn = 1;
    gameStatus = null;
    render();
@@ -87,11 +94,12 @@ function renderMessage() {
       msgEl.innerHTML = `Player <span style="color: ${COLOR_LOOKUP[turn]}">${COLOR_LOOKUP[turn]}</span>'s Turn!`;
    } else if (gameStatus === 'T') {
       // Tie game
-      msgEl.textContent = 'Tie Game! Try Again!';
+      msgEl.textContent = 'Tie Game 👻  Try Again!';
   } else {
     // Player has won!
     msgEl.innerHTML = `Player <span style="color: ${COLOR_LOOKUP[turn*-1]}">${COLOR_LOOKUP[turn*-1]}</span> Wins!`;
   }
+  replayButton.style.visibility = gameStatus ? 'visible' : 'hidden';
 }
 
 function checkWin(columnIdx, rowIdx) {
@@ -100,7 +108,6 @@ function checkWin(columnIdx, rowIdx) {
       checkHorzWin(columnIdx, rowIdx, player) ||
       checkDiagLeftWin(columnIdx, rowIdx, player) ||
       checkDiagRightWin(columnIdx, rowIdx, player);
-      
     }
 
 function checkVertWin(columnIdx, rowIdx, player) {
@@ -157,27 +164,6 @@ function checkDiagLeftWin(columnIdx, rowIdx, player) {
       return count >= 4 ? winner = true : null;
 }
 
-
-// function checkDiagLeftWin(columnIdx, rowIdx, player) {
-//    const columnArr = board[columnIdx][rowIdx];
-//    let count = 1;
-//    let idx1 = columnIdx + 1;
-//    let idx2 = columnArr + 1;
-//    while((idx1 < board.length) && board[0].length[idx1][idx2] === columnArr) {
-//       count++;
-//       idx1++;
-//       idx2++;
-//    }
-//    idx1 = columnIdx - 1;
-//    idx2 = columnIdx - 1;
-//    while(idx1 >= 0 && idx2 >=0 && board[idx1][idx2] === columnArr) {
-//       count++;
-//       idx1--;
-//       idx2--;
-//    }
-//       return count >=4 ? winner = true : null;
-// }
-
 function checkDiagRightWin(columnIdx, rowIdx, player) {
    const columnArr = board[columnIdx][rowIdx];
    let count = 1;
@@ -198,8 +184,6 @@ function checkDiagRightWin(columnIdx, rowIdx, player) {
       return count >=4 ? winner = true : null;
 }
 
-
-
 function getGameStatus() {
    let flattenBoard = board.flat(2);
    if (!flattenBoard.includes(0)) return 'T';
@@ -207,37 +191,22 @@ function getGameStatus() {
    return null;
 }
 
+// renderScores();
+// function renderScores() {
+//    for (let scoreKey in scores) {
+//    // TODO: refactor for efficiency
+//        const scoreEl = document.getElementById(`${scoreKey}-score`);
+//        scoreEl.textContent = scores[scoreKey];
 
-// I C E    B O X
-   // lookup how to keep track of scores. watch RPS  lecture!!!   
-   // NEED TO FIND OUT HOW TO MOVE THE CIRCLE/PLAYER'S TURN 
-   // TO LAST ITEM IN THE COLUMN!!! MAYBE CHANGE INDEX???
-
-
-// function getGameStatus() {
-//    // Player won!
-//    if (winner === 1) {
-//           msgEls.innerHTML = 'Purple Wins!';
-//           alert('Purple Wins!')
-//       } else if
-//    // Player won!
-//    (winner === -1) {
-//       msgEls.innerHTML = 'Pink Wins!';
-//       alert('Pink Wins!')
-//    //  } else (winner === 'null' && !(board.includes(0)))
-//    //    //Tie
-//    //    msgEls.innerHTML = '?Tie game! Try again!'
 //    }
 // }
 
-// function renderMessage() {
-//    if (gameStatus === null) {
-//       msgEl.innerHTML = `Player <span style="color: ${COLOR_LOOKUP[turn]}">${COLOR_LOOKUP[turn].toUpperCase()}</span>'s Turn`;
-//    } else if (gameStatus === 'T') {
-//       // Tie game
-//       msgEl.textContent = 'Tie Game! Try Again!';
-//   } else {
-//     // Player has won!
-//     msgEl.innerHTML = `Player <span style="color: ${COLOR_LOOKUP[gameStatus]}">${COLOR_LOOKUP[gameStatus].toUpperCase()}</span>'s Wins!`;
-//   }
-// }
+
+// I C E    B O X
+   // Tie game
+   // replay game function --DONE!!!
+   // lookup how to keep track of scores. watch RPS  lecture!!!
+   // timer
+   // sound
+   // NEED TO FIND OUT HOW TO MOVE THE CIRCLE/PLAYER'S TURN 
+   // TO LAST ITEM IN THE COLUMN!!! MAYBE CHANGE INDEX???

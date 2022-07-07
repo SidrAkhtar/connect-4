@@ -11,6 +11,28 @@ body {
    background-color: #c0c0c0;
 }
 
+#player1 > div {
+   display: flex;
+   /* flex-direction: row;
+   justify-content: left; */
+   /* justify-content: left;
+   grid-template-columns: 8vmin; */
+   /* grid-template-rows: 10vmin 10vmin 35vmin 15vmin; */
+ }
+ 
+ /* main * {
+   display: flex;
+   justify-content: left;
+   align-items: left;
+ } */
+ 
+ /* #p-result, #c-result {
+   border: 2vmin solid white;
+   border-radius: 5vmin;
+   width: 100%;
+   padding: 2vmin;
+ } */
+
 #pointers {
    display: grid;
    grid-template-columns: repeat(7, 8vmin);
@@ -45,7 +67,6 @@ body {
 }
 
 #board > div {
-
    border-radius: 50%;
    border: 0.5vmin solid maroon;
 
@@ -72,9 +93,9 @@ h2, h3 {
    margin: 0vmin;
 }
 
-.Leftside {
+/* .Leftside {
    text-align: left;
-}
+} */
 
 /* .Rightside {
    justify-content: right;
