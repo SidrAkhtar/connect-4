@@ -111,7 +111,7 @@ button {
    font-size: 5vmin;
    font-stretch: extra-expanded;
    color: maroon;
-   /* margin-top: 5vmin; */
+   margin-top: 5vmin;
    border: 5px solid;
    border-radius: 7px;
    background-color: #BC8F8F;
