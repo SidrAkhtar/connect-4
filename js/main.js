@@ -98,8 +98,9 @@ function renderMessage() {
 function checkWin(columnIdx, rowIdx) {
    const player = board[columnIdx][rowIdx]
    return checkVertWin(columnIdx, rowIdx, player) ||
-      checkHorzWin(columnIdx, rowIdx, player) || 
-      checkDiagWin(columnIdx, rowIdx, player);
+    checkHorzWin(columnIdx, rowIdx, player)
+   // || 
+   // checkDiagWin(columnIdx, rowIdx, player);
     }
 
 function checkVertWin(columnIdx, rowIdx, player) {
@@ -120,27 +121,27 @@ function checkVertWin(columnIdx, rowIdx, player) {
 
 function checkHorzWin(columnIdx, rowIdx, player) {
    const columnArr = board[columnIdx][rowIdx];
-   console.log('columnIdx', columnIdx);
-   console.log('rowIdx', columnIdx);
+   // console.log('columnIdx', columnIdx);
+   // console.log('rowIdx', columnIdx);
    let count = 1
    let idx = columnIdx + 1;
    while((idx < board.length) && board[idx][rowIdx] === columnArr) {
       count++;
       idx--;
    }
-   idx = columnIdx -1;
-   while(idx >= 0 && board[idx][rowIdx] === columnArr) {
+   idx = columnIdx - 1;
+   while((idx >= 0) && board[idx][rowIdx] === columnArr) {
       count++;
-      idx++;
+      idx--;
    }
-      console.log (count);
-      return count >= 4 ? winner = true : null;
+      // console.log (count);
+      return count >=4 ? winner = true : null;
    }
 
 
-function checkDiagWin(columnIdx, rowIdx, player) {
+// function checkDiagWin(columnIdx, rowIdx, player) {
    
-}
+// }
 
 
 // TODO: need to update gameStatus!!!
