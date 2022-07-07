@@ -20,7 +20,7 @@ let gameStatus; // null -> game in play; 1/-1 player win; 'T' -> tie
 /*----- cached element references -----*/
 const pointerEls = [...document.querySelectorAll('#pointers > div')];
 const msgEl = document.querySelector('h3');
-const msgEls = document.querySelector('h4');
+// const msgEls = document.querySelector('h4');
 const replayButton = document.getElementById('play-again-button');
 
 /*----- event listeners -----*/
