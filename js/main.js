@@ -115,7 +115,6 @@ function checkVertWin(columnIdx, rowIdx, player) {
    }
    console.log (count);
    return count === 4 ? winner = true : null;
-
 }
 
 function checkHorzWin(columnIdx, rowIdx, player) {
