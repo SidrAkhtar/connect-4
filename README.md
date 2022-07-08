@@ -1,7 +1,7 @@
 <div align="center">
    <h1>Connect 4</h1>
    <a href="mailto:sidrakanwal14@gmail.com" target="_blank">
-      <img src="https://img.shields.io/badge/-sidrakanwal14@gmail.com>-c14438?style=flat&logo=Gmail&logoColor=white">
+      <img src="https://img.shields.io/badge/-Gmail>-c14438?style=flat&logo=Gmail&logoColor=white">
    </a>
 </div>
 
@@ -15,46 +15,43 @@
 - The game ends when there is a 4 in a row; meaning a player **wins**, or if there are no connected 4 circles, then game is a **Tie**.
 
 <h1>Screenshots</h1>
+| Description | Screenshot |
 |------------ | ------------|
-| <div align="center">
-<p>New Game</p>
-<p>The game starts with a blank board. Click on one of the pointers on the top to start the game.</p>
-| <img src="https://i.imgur.com/YLer2ku.png" width="700"> |
-</div>
+| <h3>New Game</h3>
+<p>The game starts with a blank board. Click on one of the pointers on the top to start the game.</p> | <img src="https://i.imgur.com/YLer2ku.png" width="700"> |
 
 
 | Description | Screenshot |
 |------------ | ------------|
-| <h3 align="center">Home Page</h3> | <img src="https://github.com/amarpan/meet-your-classmates/raw/main/public/Screenshots/Homepage.Wireframe.MYC.png" width="700"/>
-| <h3 align="center">Profile Page</h3> | <img src="https://github.com/amarpan/meet-your-classmates/raw/main/public/Screenshots/ProfilePage.Wireframe.MYC.png" width="700"> |
-</details>
-
-<details>
+| <h3>Vertical Win</h3>
+<p>.</p> | <img src="https://i.imgur.com/ipJVpmk.png" width="700"> |
 
 | Description | Screenshot |
 |------------ | ------------|
-| <h3 align="center">Feed Page</h3> | <img src="https://github.com/amarpan/meet-your-classmates/blob/main/public/Screenshots/FeedPage.png?raw=true" width="700"/> |
-| <h3 align="center">Profile Page</h3> | <img src="https://github.com/amarpan/meet-your-classmates/raw/main/public/Screenshots/ProfilePage.png" width="700"/> |
-</details>
+| <h3>Horizontal Win</h3>
+<p>.</p> | <img src="https://i.imgur.com/zUtzHLG.png" width="700"> |
+
+| Description | Screenshot |
+|------------ | ------------|
+| <h3>Diagonal Win</h3>
+<p>.</p> | <img src="https://i.imgur.com/A0twskz.png" width="700"> |
 
 
-## **Screenshots**
 
-
-
-
-## **Technologies Used**
+## :computer: Technologies Used
 ![JavaScript](https://img.shields.io/badge/-JavaScript-333?style=flat&logo=javascript) 
 ![HTML5](https://img.shields.io/badge/-HTML5-333?style=flat&logo=html5)
 ![CSS3](https://img.shields.io/badge/-CSS-333?style=flat&logo=css3)
+![Github](https://img.shields.io/badge/-GitHub-333?style=flat&logo=github)
+![VSCode](https://img.shields.io/badge/-VS_Code-333?style=flat&logo=visualstudio)
 
-## **Getting Started**
-
+<h2> :atom_symbol: Getting Started </h2>
 [Click to Play Connect 4!](https://sidrakhtar.github.io/connect-4/)
 
-## **Next Steps**
+## :fast_forward: Next Steps   
 
-- **Future enhancement one**: Add background music and allow players to mute/stop the sound if they don't want to have the backgroud music
-- **Future enhancement two**: Keep track of the score
-- **Future enhancement three**: Add timer
-- **Future enhancement four**: When the game page load, have player enter their name before they start the game.
+### Upcoming Features
+- [X] Keep track of the score
+- [X] When the game page load, have player enter their name before they start the game.
+- [X] Hide audio player and let player also control the functionality of the audio player (play, pause or stop music)
+- [X] Add timer
