@@ -1,9 +1,12 @@
 1. Define required constants
 
-   1.1. Define colors object with keys of “null” when the circle is empty and players 1 and -1. 
+   1.1. Define colors object with keys of “null” when the circle is empty and players 1 and -1.
+   
    1.2. Value assigned to each key represents the color to display for an empty circle player 1 and player -1
+      
       1.2.1. Player 1: “mediumpurple”, player 2: “crimson”, null: “silver”
-   1.3. Define 4 possible winning combinations, each containing 4 indexes of the board.
+  
+  1.3. Define 4 possible winning combinations, each containing 4 indexes of the board.
 
 2. Define required variables used to track the state of the game
    2.1. Use board array to represent the circles
