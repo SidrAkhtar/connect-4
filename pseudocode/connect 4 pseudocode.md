@@ -35,7 +35,7 @@
       
       4.1.3. Initialize the winner to “null” because there is no winner or tie yet.
          
-         4.1.3.1. Winner will have player value 1/-1 when there is a winner or will have ‘T’ if there is a tie.
+      4.1.3.1. Winner will have player value 1/-1 when there is a winner or will have ‘T’ if there is a tie.
    
    4.2. Render those values to the page
       
