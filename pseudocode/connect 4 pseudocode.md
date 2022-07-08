@@ -41,15 +41,15 @@
       
       4.2.1. Render the board
          
-         4.2.1.1. Loop over each of the 42 circles on page
+      4.2.1.1. Loop over each of the 42 circles on page
       
       4.2.2. Render a message:
          
-         4.2.2.1. Show a message to indicate which player’s turn it is
+      4.2.2.1. Show a message to indicate which player’s turn it is
          
-         4.2.2.2. If  a player wins, render a congratulatory message 
+      4.2.2.2. If  a player wins, render a congratulatory message 
          
-         4.2.2.3. If it is a tie game, render a tie message
+      4.2.2.3. If it is a tie game, render a tie message
    
    4.3. Wait for the player to click a pointer on top of the column
 
