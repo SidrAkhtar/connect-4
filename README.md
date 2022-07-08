@@ -28,7 +28,7 @@
 
 | Description | Screenshot |
 |------------ | ------------|
-| <p>Horizontal Win <br> Player connected 4 circles horizontally.</p> | <img src="https://i.imgur.com/zUtzHLG.png" width="1200"> |
+| <p>Horizontal Win <br> Player connected 4 circles horizontally.</p> | <img src="https://i.imgur.com/zUtzHLG.png" width="1000"> |
 
 | Description | Screenshot |
 |------------ | ------------|
