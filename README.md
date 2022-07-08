@@ -15,10 +15,10 @@
 - The game ends when there is a 4 in a row; meaning a player **wins**, or if there are no connected 4 circles, then game is a **Tie**.
 
 <h1>Screenshots</h1>
+
 | Description | Screenshot |
 |------------ | ------------|
-| <h3>New Game</h3>
-<p>The game starts with a blank board. Click on one of the pointers on the top to start the game.</p> | <img src="https://i.imgur.com/YLer2ku.png" width="700"> |
+| <p>New Game <br> The game starts with a blank board. Click on one of the pointers on the top to start the game.</p> | <img src="https://i.imgur.com/YLer2ku.png" width="700"> |
 
 
 | Description | Screenshot |
@@ -26,7 +26,7 @@
 | <h3>Vertical Win</h3>
 <p>.</p> | <img src="https://i.imgur.com/ipJVpmk.png" width="700"> |
 
-| Description | Screenshot |
+
 |------------ | ------------|
 | <h3>Horizontal Win</h3>
 <p>.</p> | <img src="https://i.imgur.com/zUtzHLG.png" width="700"> |
