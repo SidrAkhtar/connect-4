@@ -1,7 +1,7 @@
 <div align="center">
    <h1>Connect 4</h1>
    <a href="mailto:sidrakanwal14@gmail.com" target="_blank">
-      <img src="https://img.shields.io/badge/-Gmail>-c14438?style=flat&logo=Gmail&logoColor=white">
+      <img src="https://img.shields.io/badge/-Gmail >-c14438?style=flat&logo=Gmail&logoColor=white">
    </a>
 </div>
 
