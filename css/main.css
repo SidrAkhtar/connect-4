@@ -8,20 +8,8 @@ body {
    justify-content: center;
    align-items: center;
    font-family: 'Stick No Bills', sans-serif;
-   background-color: #c0c0c0;
-}
-
-/* #player1 > div {
-   display: flex;
-} */
-
-#scores {
-   display: flex;
-}
-
-div > #player1 {
-   display: flex;
-   justify-content: left;
+   background-image: url(https://i.imgur.com/uRq2oIL.jpg);
+   opacity: 0.9;
 }
 
 #pointers {
@@ -36,7 +24,7 @@ div > #player1 {
    height: 5vmin;
    border-width: 5vmin;
    border-style: solid;
-   border-color: #BC8F8F transparent transparent;
+   border-color: #DB7093 transparent transparent;
    transform: scale(0.7);
 }
 
@@ -55,19 +43,14 @@ div > #player1 {
    align-content: center;
    margin: 50x;
    gap: 0.5vmin;
-   /* cursor: default; */
+   cursor: default;
+   /* background-image: url(https://i.imgur.com/MJKXZFp.jpg); */
+   background-color: lightcoral;
 }
 
 #board > div {
    border-radius: 50%;
    border: 0.5vmin solid maroon;
-
-
-/* align-content: start; */
-/* gap: 0px; */
-   /* margin: 100px; */
-   /* padding: -5px; */
-
 }
 
 h1 {
@@ -81,25 +64,17 @@ margin: 1vmin;
 h2 {
    font-size: 30px;
    font-stretch: extra-expanded;
-   color: indianred;
+   color: #B22222;
    margin: -4vmin;
 }
 
 h3 {
-   font-size: 30px;
+   font-size: 35px;
    font-stretch: extra-expanded;
-   color: indianred;
-   margin-top: 5vmin;
+   color: MediumVioletRed;
+   margin-top: 3vmin;
    padding: 5vmin;
 }
-
-/* .Leftside {
-   text-align: left;
-} */
-
-/* .Rightside {
-   justify-content: right;
-} */
 
 footer {
    display: flex;
@@ -108,15 +83,25 @@ footer {
 }
 
 button {
-   font-size: 5vmin;
+   font-size: 4vmin;
    font-stretch: extra-expanded;
    color: maroon;
    margin-top: 5vmin;
+   margin-bottom: 3vmin;
    border: 5px solid;
    border-radius: 7px;
-   background-color: #BC8F8F;
+   background-color: pink;
    outline-color: transparent;
    outline-style: solid;
-   box-shadow: 0 0 0 4px maroon;
+   box-shadow: 0 0 0 4px #DB7093;
    transition: 0.7s;
 }
+
+#foobar {
+   opacity: 0.8;
+   margin: 0;
+}
+
+audio::-webkit-media-controls-panel {
+   background-color:indianred !important;
+   }

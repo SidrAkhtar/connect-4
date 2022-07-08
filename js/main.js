@@ -3,10 +3,11 @@
    // cell values: 0, 1, -1
    '0': 'white',
    '1': 'mediumpurple',
-   '-1': 'palevioletred', //hotpink
+   '-1': 'crimson', //hotpink
    }
 
 // const audio = new Audio('https://assets.mixkit.co/sfx/preview/mixkit-simple-countdown-922.mp3');
+// const musicPlay = new Audio('./audio/mixkit-lo-fi-01-763.mp3');
 
 
 /*----- app's state (variables) -----*/
@@ -20,13 +21,13 @@ let gameStatus; // null -> game in play; 1/-1 player win; 'T' -> tie
 /*----- cached element references -----*/
 const pointerEls = [...document.querySelectorAll('#pointers > div')];
 const msgEl = document.querySelector('h3');
-// const msgEls = document.querySelector('h4');
+const msgEls = document.querySelector('h4');
 const replayButton = document.getElementById('play-again-button');
 
 /*----- event listeners -----*/
 document.getElementById('pointers').addEventListener('click', handleDrop);
 replayButton.addEventListener('click', init);
-
+const musicPlay = document.getElementById('#foobar');
 
 /*----- functions -----*/
 init();
@@ -50,6 +51,7 @@ function init() {
    gameStatus = null;
    render();
    winner = null;
+   musicPlay();
 }
 
 // Render’s job is to transfer/visualize all state to the DOM
@@ -123,6 +125,7 @@ function checkVertWin(columnIdx, rowIdx, player) {
    }
    console.log (count);
    return count === 4 ? winner = true : null;
+
 }
    
 

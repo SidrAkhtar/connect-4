@@ -30,10 +30,7 @@ In the game, players take turns clicking on the Dropper at the top of the column
 
 ## **Next Steps**
 
-**Future enhancement one**: Add background music and allow players to mute/stop the sound if they don't want to have the backgroud music
-
-**Future enhancement two**: Keep track of the score
-
-**Future enhancement three**: Add timer
-
-**Future enhancement four**: When the game page load, have player enter their name before they start the game.
+- **Future enhancement one**: Add background music and allow players to mute/stop the sound if they don't want to have the backgroud music
+- **Future enhancement two**: Keep track of the score
+- **Future enhancement three**: Add timer
+- **Future enhancement four**: When the game page load, have player enter their name before they start the game.
