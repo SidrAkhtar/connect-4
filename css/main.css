@@ -44,7 +44,6 @@ body {
    margin: 50x;
    gap: 0.5vmin;
    cursor: default;
-   /* background-image: url(https://i.imgur.com/MJKXZFp.jpg); */
    background-color: lightcoral;
 }
 
@@ -54,11 +53,10 @@ body {
 }
 
 h1 {
-font-size: 100px;
-font-stretch: extra-expanded;
-color: maroon;
-margin: 1vmin;
-/* padding: 0vmin; */
+   font-size: 100px;
+   font-stretch: extra-expanded;
+   color: maroon;
+   margin: 1vmin;
 }
 
 h2 {
@@ -86,7 +84,7 @@ button {
    font-size: 4vmin;
    font-stretch: extra-expanded;
    color: maroon;
-   margin-top: 5vmin;
+   margin-top: 2vmin;
    margin-bottom: 3vmin;
    border: 5px solid;
    border-radius: 7px;
@@ -94,12 +92,13 @@ button {
    outline-color: transparent;
    outline-style: solid;
    box-shadow: 0 0 0 4px #DB7093;
-   transition: 0.7s;
+   transition: 0.5;
+   opacity: 0.8;
 }
 
 #foobar {
    opacity: 0.8;
-   margin: 0;
+   margin: 10px;
 }
 
 audio::-webkit-media-controls-panel {

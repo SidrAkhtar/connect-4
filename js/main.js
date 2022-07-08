@@ -1,7 +1,7 @@
 /*----- constants -----*/
-   const COLOR_LOOKUP = {
+const COLOR_LOOKUP = {
    // cell values: 0, 1, -1
-   '0': 'white',
+   '0': 'silver',
    '1': 'mediumpurple',
    '-1': 'crimson', //hotpink
    }
