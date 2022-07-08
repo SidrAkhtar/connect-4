@@ -18,23 +18,18 @@
 
 | Description | Screenshot |
 |------------ | ------------|
-| <p>New Game <br> The game starts with a blank board. Click on one of the pointers on the top to start the game.</p> | <img src="https://i.imgur.com/YLer2ku.png" width="700"> |
-
-
-| Description | Screenshot |
-|------------ | ------------|
-| <h3>Vertical Win</h3>
-<p>.</p> | <img src="https://i.imgur.com/ipJVpmk.png" width="700"> |
+| <p>New Game <br> The game starts with a blank board. Click on one of the pointers on the top to start the game. Player can play/pause the music.</p> | <img src="https://i.imgur.com/YLer2ku.png" width="1400"> |
 
 
 |------------ | ------------|
-| <h3>Horizontal Win</h3>
-<p>.</p> | <img src="https://i.imgur.com/zUtzHLG.png" width="700"> |
+| <p>Vertical Win <br> This is a vertical win since player has connected 4 circles. "Play Again" button appears once a winner is determined. </p> | <img src="https://i.imgur.com/ipJVpmk.png" width="1400"> |
 
-| Description | Screenshot |
+
 |------------ | ------------|
-| <h3>Diagonal Win</h3>
-<p>.</p> | <img src="https://i.imgur.com/A0twskz.png" width="700"> |
+| <p>Horizontal Win <br> Player connected 4 circles horizontally.</p> | <img src="https://i.imgur.com/zUtzHLG.png" width="1400"> |
+
+|------------ | ------------|
+| <h3>Diagonal Win <br> This is a Diagonal win since player "mediumpurole" connected 4 circles diagonally.</p> | <img src="https://i.imgur.com/A0twskz.png" width="1400"> |
 
 
 
@@ -46,12 +41,13 @@
 ![VSCode](https://img.shields.io/badge/-VS_Code-333?style=flat&logo=visualstudio)
 
 <h2> :atom_symbol: Getting Started </h2>
+
 [Click to Play Connect 4!](https://sidrakhtar.github.io/connect-4/)
 
 ## :fast_forward: Next Steps   
 
 ### Upcoming Features
-- [X] Keep track of the score
-- [X] When the game page load, have player enter their name before they start the game.
-- [X] Hide audio player and let player also control the functionality of the audio player (play, pause or stop music)
-- [X] Add timer
+- [ ] Keep track of the score
+- [ ] When the game page load, have player enter their name before they start the game.
+- [ ] Hide audio player and let player also control the functionality of the audio player (play, pause or stop music)
+- [ ] Add timer
