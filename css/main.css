@@ -15,9 +15,10 @@ body {
 #pointers {
    display: grid;
    grid-template-columns: repeat(7, 8vmin);
-   gap: 0.8vmin;
+   gap: 0.4vmin;
    margin-top: -8vmin;
    margin-bottom: -4vmin;
+   justify-content: center;
 }
 
 #pointers > div {
@@ -41,7 +42,6 @@ body {
    background-color: #BC8F8F;
    border: 4mm ridge maroon;
    align-content: center;
-   margin: 50x;
    gap: 0.5vmin;
    cursor: default;
    background-color: lightcoral;
@@ -103,4 +103,4 @@ button {
 
 audio::-webkit-media-controls-panel {
    background-color:indianred !important;
-   }
+}

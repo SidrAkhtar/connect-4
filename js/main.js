@@ -1,14 +1,10 @@
 /*----- constants -----*/
 const COLOR_LOOKUP = {
-   // cell values: 0, 1, -1
+// cell values: 0, 1, -1
    '0': 'silver',
    '1': 'mediumpurple',
-   '-1': 'crimson', //hotpink
-   }
-
-// const audio = new Audio('https://assets.mixkit.co/sfx/preview/mixkit-simple-countdown-922.mp3');
-// const musicPlay = new Audio('./audio/mixkit-lo-fi-01-763.mp3');
-
+   '-1': 'crimson',
+}
 
 /*----- app's state (variables) -----*/
 // Array of  42 elements... null -> circles available; 1 or -1  for players
@@ -16,7 +12,6 @@ let board; // 2D Array wherre the nested arrays represent the columns
 let turn; // 1 or -1; 0 for empty cell
 let winner = null;
 let gameStatus; // null -> game in play; 1/-1 player win; 'T' -> tie
-
 
 /*----- cached element references -----*/
 const pointerEls = [...document.querySelectorAll('#pointers > div')];
@@ -27,7 +22,6 @@ const replayButton = document.getElementById('play-again-button');
 /*----- event listeners -----*/
 document.getElementById('pointers').addEventListener('click', handleDrop);
 replayButton.addEventListener('click', init);
-const musicPlay = document.getElementById('#foobar');
 
 /*----- functions -----*/
 init();
@@ -43,10 +37,6 @@ function init() {
       [0, 0, 0, 0, 0, 0], // column 5
       [0, 0, 0, 0, 0, 0], // column 6
    ];
-   // scores = {
-   //    player1: 0,
-   //    player2: 0,
-   // }
    turn = 1;
    gameStatus = null;
    render();
@@ -68,7 +58,7 @@ function render() {
    renderMessage();
 }
 
-// to hide/show the pointers... hide if no 0' left in the column
+// to hide/show the pointers... hide if no 0's left in the column
 function renderPointers() {
    pointerEls.forEach(function(pointerEl, columnIdx) {
       pointerEl.style.visibility = board[columnIdx].includes(0) ? 'visible' : 'hidden';
@@ -98,10 +88,10 @@ function renderMessage() {
       // Tie game
       msgEl.textContent = 'Tie Game 👻  Try Again!';
   } else {
-    // Player has won!
-    msgEl.innerHTML = `Player <span style="color: ${COLOR_LOOKUP[turn*-1]}">${COLOR_LOOKUP[turn*-1]}</span> Wins!`;
+      // Player has won!
+      msgEl.innerHTML = `Player <span style="color: ${COLOR_LOOKUP[turn*-1]}">${COLOR_LOOKUP[turn*-1]}</span> Wins! 🎉`;
   }
-  replayButton.style.visibility = gameStatus ? 'visible' : 'hidden';
+   replayButton.style.visibility = gameStatus ? 'visible' : 'hidden';
 }
 
 function checkWin(columnIdx, rowIdx) {
@@ -110,7 +100,7 @@ function checkWin(columnIdx, rowIdx) {
       checkHorzWin(columnIdx, rowIdx, player) ||
       checkDiagLeftWin(columnIdx, rowIdx, player) ||
       checkDiagRightWin(columnIdx, rowIdx, player);
-    }
+}
 
 function checkVertWin(columnIdx, rowIdx, player) {
    const columnArr = board[columnIdx];
@@ -120,19 +110,16 @@ function checkVertWin(columnIdx, rowIdx, player) {
    rowIdx--;
    // Count until no longer the same 'player'
    while(columnArr[rowIdx] === player && rowIdx >= 0) {
-         count++;
-         rowIdx--;
+      count++;
+      rowIdx--;
    }
    console.log (count);
    return count === 4 ? winner = true : null;
 
 }
-   
 
 function checkHorzWin(columnIdx, rowIdx, player) {
    const columnArr = board[columnIdx][rowIdx];
-   // console.log('columnIdx', columnIdx);
-   // console.log('rowIdx', columnIdx);
    let count = 1
    let idx = columnIdx + 1;
    while((idx < board.length) && board[idx][rowIdx] === columnArr) {
@@ -145,7 +132,7 @@ function checkHorzWin(columnIdx, rowIdx, player) {
       idx--;
    }
       return count === 4 ? winner = true : null;
-   }
+}
 
 function checkDiagLeftWin(columnIdx, rowIdx, player) {
    const columnArr = board[columnIdx][rowIdx];
@@ -193,23 +180,3 @@ function getGameStatus() {
    if (winner === true) return 'W';
    return null;
 }
-
-// renderScores();
-// function renderScores() {
-//    for (let scoreKey in scores) {
-//    // TODO: refactor for efficiency
-//        const scoreEl = document.getElementById(`${scoreKey}-score`);
-//        scoreEl.textContent = scores[scoreKey];
-
-//    }
-// }
-
-
-// I C E    B O X
-   // Tie game
-   // replay game function --DONE!!!
-   // lookup how to keep track of scores. watch RPS  lecture!!!
-   // timer
-   // sound
-   // NEED TO FIND OUT HOW TO MOVE THE CIRCLE/PLAYER'S TURN 
-   // TO LAST ITEM IN THE COLUMN!!! MAYBE CHANGE INDEX???
