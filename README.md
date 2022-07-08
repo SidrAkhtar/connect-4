@@ -23,7 +23,7 @@
 
 | Description | Screenshot |
 |------------ | ------------|
-| <p>Vertical Win <br> This is a vertical win since player has connected 4 circles. "Play Again" button appears once a winner is determined. </p> | <img src="https://i.imgur.com/ipJVpmk.png" width="1400"> |
+| <p>Vertical Win <br> This is a vertical win since player has connected 4 circles. "Play Again" button appears once a winner is determined.</p> | <img src="https://i.imgur.com/ipJVpmk.png" width="1400"> |
 
 
 | Description | Screenshot |
@@ -32,7 +32,7 @@
 
 | Description | Screenshot |
 |------------ | ------------|
-| <h3>Diagonal Win <br> This is a Diagonal win since player "mediumpurole" connected 4 circles diagonally.</p> | <img src="https://i.imgur.com/A0twskz.png" width="1400"> |
+| <p>Diagonal Win <br> This is a Diagonal win since player "mediumpurole" connected 4 circles diagonally.</p> | <img src="https://i.imgur.com/A0twskz.png" width="1400"> |
 
 
 
