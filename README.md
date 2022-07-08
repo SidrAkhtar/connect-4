@@ -28,11 +28,11 @@
 
 | Description | Screenshot |
 |------------ | ------------|
-| <p>Horizontal Win <br> Player connected 4 circles horizontally.</p> | <img src="https://i.imgur.com/zUtzHLG.png" width="1400"> |
+| <p>Horizontal Win <br> Player connected 4 circles horizontally.</p> | <img src="https://i.imgur.com/zUtzHLG.png" width="1200"> |
 
 | Description | Screenshot |
 |------------ | ------------|
-| <p>Diagonal Win <br> This is a Diagonal win since player "mediumpurole" connected 4 circles diagonally.</p> | <img src="https://i.imgur.com/A0twskz.png" width="1400"> |
+| <p>Diagonal Win <br> This is a Diagonal win since player mediumpurple connected 4 circles diagonally.</p> | <img src="https://i.imgur.com/A0twskz.png" width="1400"> |
 
 
 
