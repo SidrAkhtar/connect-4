@@ -54,3 +54,4 @@
 - [ ] When the game page load, have player enter their name before they start the game.
 - [ ] Hide audio player and let player also control the functionality of the audio player (play, pause or stop music)
 - [ ] Add timer
+- [ ] Animation to show each color drop
