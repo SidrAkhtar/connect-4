@@ -113,7 +113,6 @@ function checkVertWin(columnIdx, rowIdx, player) {
       count++;
       rowIdx--;
    }
-   console.log (count);
    return count === 4 ? winner = true : null;
 }
 
